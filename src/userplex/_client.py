@@ -31,9 +31,8 @@ from ._base_client import (
 )
 
 if TYPE_CHECKING:
-    from .resources import users, events
+    from .resources import users
     from .resources.users import UsersResource, AsyncUsersResource
-    from .resources.events import EventsResource, AsyncEventsResource
 
 __all__ = [
     "Timeout",
@@ -107,12 +106,6 @@ class Userplex(SyncAPIClient):
         from .resources.users import UsersResource
 
         return UsersResource(self)
-
-    @cached_property
-    def events(self) -> EventsResource:
-        from .resources.events import EventsResource
-
-        return EventsResource(self)
 
     @cached_property
     def with_raw_response(self) -> UserplexWithRawResponse:
@@ -289,12 +282,6 @@ class AsyncUserplex(AsyncAPIClient):
         return AsyncUsersResource(self)
 
     @cached_property
-    def events(self) -> AsyncEventsResource:
-        from .resources.events import AsyncEventsResource
-
-        return AsyncEventsResource(self)
-
-    @cached_property
     def with_raw_response(self) -> AsyncUserplexWithRawResponse:
         return AsyncUserplexWithRawResponse(self)
 
@@ -419,12 +406,6 @@ class UserplexWithRawResponse:
 
         return UsersResourceWithRawResponse(self._client.users)
 
-    @cached_property
-    def events(self) -> events.EventsResourceWithRawResponse:
-        from .resources.events import EventsResourceWithRawResponse
-
-        return EventsResourceWithRawResponse(self._client.events)
-
 
 class AsyncUserplexWithRawResponse:
     _client: AsyncUserplex
@@ -437,12 +418,6 @@ class AsyncUserplexWithRawResponse:
         from .resources.users import AsyncUsersResourceWithRawResponse
 
         return AsyncUsersResourceWithRawResponse(self._client.users)
-
-    @cached_property
-    def events(self) -> events.AsyncEventsResourceWithRawResponse:
-        from .resources.events import AsyncEventsResourceWithRawResponse
-
-        return AsyncEventsResourceWithRawResponse(self._client.events)
 
 
 class UserplexWithStreamedResponse:
@@ -457,12 +432,6 @@ class UserplexWithStreamedResponse:
 
         return UsersResourceWithStreamingResponse(self._client.users)
 
-    @cached_property
-    def events(self) -> events.EventsResourceWithStreamingResponse:
-        from .resources.events import EventsResourceWithStreamingResponse
-
-        return EventsResourceWithStreamingResponse(self._client.events)
-
 
 class AsyncUserplexWithStreamedResponse:
     _client: AsyncUserplex
@@ -475,12 +444,6 @@ class AsyncUserplexWithStreamedResponse:
         from .resources.users import AsyncUsersResourceWithStreamingResponse
 
         return AsyncUsersResourceWithStreamingResponse(self._client.users)
-
-    @cached_property
-    def events(self) -> events.AsyncEventsResourceWithStreamingResponse:
-        from .resources.events import AsyncEventsResourceWithStreamingResponse
-
-        return AsyncEventsResourceWithStreamingResponse(self._client.events)
 
 
 Client = Userplex
