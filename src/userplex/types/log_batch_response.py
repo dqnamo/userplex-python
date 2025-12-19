@@ -2,9 +2,12 @@
 
 from .._models import BaseModel
 
-__all__ = ["EventNewResponse"]
+__all__ = ["LogBatchResponse"]
 
 
-class EventNewResponse(BaseModel):
+class LogBatchResponse(BaseModel):
+    count: float
+    """Number of logs processed"""
+
     success: bool
     """Operation success status"""

@@ -10,14 +10,15 @@ Methods:
 
 - <code title="post /api/identify">client.users.<a href="./src/userplex/resources/users.py">identify</a>(\*\*<a href="src/userplex/types/user_identify_params.py">params</a>) -> <a href="./src/userplex/types/user_identify_response.py">UserIdentifyResponse</a></code>
 
-# Events
+# Logs
 
 Types:
 
 ```python
-from userplex.types import EventNewResponse
+from userplex.types import LogBatchResponse, LogNewResponse
 ```
 
 Methods:
 
-- <code title="post /api/event">client.events.<a href="./src/userplex/resources/events.py">new</a>(\*\*<a href="src/userplex/types/event_new_params.py">params</a>) -> <a href="./src/userplex/types/event_new_response.py">EventNewResponse</a></code>
+- <code title="post /api/logs/batch">client.logs.<a href="./src/userplex/resources/logs.py">batch</a>(\*\*<a href="src/userplex/types/log_batch_params.py">params</a>) -> <a href="./src/userplex/types/log_batch_response.py">LogBatchResponse</a></code>
+- <code title="post /api/log">client.logs.<a href="./src/userplex/resources/logs.py">new</a>(\*\*<a href="src/userplex/types/log_new_params.py">params</a>) -> <a href="./src/userplex/types/log_new_response.py">LogNewResponse</a></code>

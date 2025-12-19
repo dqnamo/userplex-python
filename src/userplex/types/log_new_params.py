@@ -8,17 +8,20 @@ from typing_extensions import Required, Annotated, TypedDict
 
 from .._utils import PropertyInfo
 
-__all__ = ["EventNewParams"]
+__all__ = ["LogNewParams"]
 
 
-class EventNewParams(TypedDict, total=False):
+class LogNewParams(TypedDict, total=False):
     name: Required[str]
 
     user_id: Required[str]
     """External user ID"""
 
+    data: Dict[str, Optional[object]]
+    """Additional log data"""
+
     properties: Dict[str, Optional[object]]
-    """Additional event properties"""
+    """Alias for data, for compatibility"""
 
     timestamp: Annotated[Union[str, datetime], PropertyInfo(format="iso8601")]
-    """Event timestamp (ISO 8601)"""
+    """Log timestamp (ISO 8601)"""

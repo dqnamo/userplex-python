@@ -1,5 +1,13 @@
 # File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
+from .logs import (
+    LogsResource,
+    AsyncLogsResource,
+    LogsResourceWithRawResponse,
+    AsyncLogsResourceWithRawResponse,
+    LogsResourceWithStreamingResponse,
+    AsyncLogsResourceWithStreamingResponse,
+)
 from .users import (
     UsersResource,
     AsyncUsersResource,
@@ -7,14 +15,6 @@ from .users import (
     AsyncUsersResourceWithRawResponse,
     UsersResourceWithStreamingResponse,
     AsyncUsersResourceWithStreamingResponse,
-)
-from .events import (
-    EventsResource,
-    AsyncEventsResource,
-    EventsResourceWithRawResponse,
-    AsyncEventsResourceWithRawResponse,
-    EventsResourceWithStreamingResponse,
-    AsyncEventsResourceWithStreamingResponse,
 )
 
 __all__ = [
@@ -24,10 +24,10 @@ __all__ = [
     "AsyncUsersResourceWithRawResponse",
     "UsersResourceWithStreamingResponse",
     "AsyncUsersResourceWithStreamingResponse",
-    "EventsResource",
-    "AsyncEventsResource",
-    "EventsResourceWithRawResponse",
-    "AsyncEventsResourceWithRawResponse",
-    "EventsResourceWithStreamingResponse",
-    "AsyncEventsResourceWithStreamingResponse",
+    "LogsResource",
+    "AsyncLogsResource",
+    "LogsResourceWithRawResponse",
+    "AsyncLogsResourceWithRawResponse",
+    "LogsResourceWithStreamingResponse",
+    "AsyncLogsResourceWithStreamingResponse",
 ]
