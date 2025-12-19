@@ -8,14 +8,6 @@ from .users import (
     UsersResourceWithStreamingResponse,
     AsyncUsersResourceWithStreamingResponse,
 )
-from .events import (
-    EventsResource,
-    AsyncEventsResource,
-    EventsResourceWithRawResponse,
-    AsyncEventsResourceWithRawResponse,
-    EventsResourceWithStreamingResponse,
-    AsyncEventsResourceWithStreamingResponse,
-)
 
 __all__ = [
     "UsersResource",
@@ -24,10 +16,4 @@ __all__ = [
     "AsyncUsersResourceWithRawResponse",
     "UsersResourceWithStreamingResponse",
     "AsyncUsersResourceWithStreamingResponse",
-    "EventsResource",
-    "AsyncEventsResource",
-    "EventsResourceWithRawResponse",
-    "AsyncEventsResourceWithRawResponse",
-    "EventsResourceWithStreamingResponse",
-    "AsyncEventsResourceWithStreamingResponse",
 ]
